@@ -41,6 +41,10 @@
         Algorithms::aStar($grid);
         $grid->paintGrid("A* Pathfinding");
 
+        $grid = initGrid();
+        Algorithms::yigitsAlgorithm($grid);
+        $grid->paintGrid("Yigit's Algorithm");
+
         // When adding a new grid, create a new algorithm method in Algorithms.php following the instructions there.
         // Call the method here as shown above, after which you paint it using the paintGrid method of the class Grid.
         // For example:

@@ -8,7 +8,7 @@ require_once "TileMark.php";
 class Algorithms {
 
     // EXAMPLE ALGORITM
-    public static function singleRandomLocation($grid): Grid{
+    public static function singleRandomLocation($grid): Grid {
         // Random Neighbouring Coordinate Node. 
         // Starting with the origin(s), randomly choose a location next to the node and mark it if unmarked.
         // Add the chosen location to the list of nodes to select and continue to remove a node from the list
@@ -31,6 +31,19 @@ class Algorithms {
         }
 
         Algorithms::setPath($node);
+        return $grid;
+    }
+
+    // EXAMPLE ALGORITM
+    public static function yigitsAlgorithm($grid): Grid {
+        $nodes = Algorithms::initialiseOriginList($grid); // gives origin noddde
+        $destinations = $grid->getDestinations();
+
+        $origin = $nodes[0];
+        $destination = $destinations[0];
+
+        // mihj algoritme
+
         return $grid;
     }
 
@@ -61,7 +74,7 @@ class Algorithms {
             return $grid;
         }
  
-        $origin      = $nodes[0];
+        $origin = $nodes[0];
         $destination = $destinations[0];
  
         // unique string key for a node so we can use it in associative arrays
