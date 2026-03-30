@@ -37,6 +37,9 @@
         Algorithms::singleRandomLocation($grid);
         $grid->paintGrid("Single Random Location");
 
+        $grid = initGrid();
+        Algorithms::aStar($grid);
+        $grid->paintGrid("A* Pathfinding");
 
         // When adding a new grid, create a new algorithm method in Algorithms.php following the instructions there.
         // Call the method here as shown above, after which you paint it using the paintGrid method of the class Grid.
